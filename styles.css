@@ -1,0 +1,58 @@
+/* General Styling */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  padding: 20px;
+  line-height: 1.6;
+  background: #f0f4f8;
+  color: #333;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+/* Part 1: CSS Animations */
+.fancy-button {
+  background-color: #4CAF50;
+  border: none;
+  padding: 15px 25px;
+  color: white;
+  font-size: 16px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.fancy-button:hover {
+  transform: scale(1.1);
+  background-color: #45a049;
+}
+
+/* Keyframe animation */
+.animated-box {
+  width: 100px;
+  height: 100px;
+  background-color: coral;
+  margin-top: 20px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-30px); }
+  100% { transform: translateY(0); }
+}
+
+/* Part 3: Combined animation */
+.box-to-animate {
+  width: 100px;
+  height: 100px;
+  background-color: steelblue;
+  margin-top: 20px;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+  transform: scale(0.5);
+}
+
+.box-to-animate.active {
+  opacity: 1;
+  transform: scale(1.2) rotate(10deg);
+}
